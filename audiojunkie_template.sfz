@@ -1,0 +1,123 @@
+//=======================================================================
+// This is a generic sfz pitched instrument template
+// designed for 20 samples per velocity layer
+// (The intention is to sample 4 notes per octave
+// for 5 octaves).
+// The purpose is to make an easy "fill in the blank"
+// template .SFZ file for easily creating pitched
+// instruments in the SFZ format.
+//=======================================================================
+// Intended target SFZ players (opcode compatibility): Linuxsampler,
+// Sfizz, liquidsfz, SFZero, and Sforzando
+//=======================================================================
+
+//=======================================================================
+//
+// Instrument Name:
+//
+//=======================================================================
+//
+// Description:
+//
+//=======================================================================
+//
+// Credits:
+//
+//=======================================================================
+
+
+<control>
+// Default_path is the relative default path under which the samples
+// should be found. Example: For an instrument named violin_sustain,
+// use: default_path=./violin_sustain/ In this example, the sfz
+// instrument will look for the samples in a folder named
+// a that should be located in the same folder where the
+// violin_sustain.sfz is located.
+
+default_path=
+
+//=======================================================================
+
+<global>
+// Trigger Range: attack, release, first, legato, release_key
+// Default: attack -- Region plays on note-on
+
+trigger=
+
+// Loop_mode Range: no_loop, one_shot, loop_continuous, loop_sustain
+// Defaults: no_loop -- For samples without a loop defined
+// and loop_continuous -- For samples with defined loops
+// The loops start and end data is usually pulled from the sample
+// metadata built into the sample, but can also be manually assigned
+// with the loop_start= and loop_end= opcodes, measured in how many
+// samples to the loop point.
+
+loop_mode=
+
+// ADSR Envelope settings. Type: Floating point. Range: 0 to 100 Seconds
+// Example: ampeg_attack=0.5 Assigns a .5 second attack to the samples
+// in this instrument.
+
+ampeg_attack= ampeg_decay= ampeg_sustain= ampeg_release=
+
+//========================================================================
+
+<group>
+// lovel= and hivel= sets the velocity range for this group of samples
+// If a note with velocity value equal to or higher than lovel AND equal
+// to or lower than hivel is played, the region will play. Velocity
+// Range is 1 to 127
+// Example: lovel=60 hivel=127
+
+lovel= hivel=
+
+//========================================================================
+
+// Sampling C#, E, G, A# per octave for 5 octaves
+//
+<region> // 1
+sample= pitch_keycenter= lokey= hikey=
+<region> // 2
+sample= pitch_keycenter= lokey= hikey=
+<region> // 3
+sample= pitch_keycenter= lokey= hikey=
+<region> // 4
+sample= pitch_keycenter= lokey= hikey=
+<region> // 5
+sample= pitch_keycenter= lokey= hikey=
+<region> // 6
+sample= pitch_keycenter= lokey= hikey=
+<region> // 7
+sample= pitch_keycenter= lokey= hikey=
+<region> // 8
+sample= pitch_keycenter= lokey= hikey=
+<region> // 9
+sample= pitch_keycenter= lokey= hikey=
+<region> // 10
+sample= pitch_keycenter= lokey= hikey=
+<region> // 11
+sample= pitch_keycenter= lokey= hikey=
+<region> // 12
+sample= pitch_keycenter= lokey= hikey=
+<region> // 13
+sample= pitch_keycenter= lokey= hikey=
+<region> // 14
+sample= pitch_keycenter= lokey= hikey=
+<region> // 15
+sample= pitch_keycenter= lokey= hikey=
+<region> // 16
+sample= pitch_keycenter= lokey= hikey=
+<region> // 17
+sample= pitch_keycenter= lokey= hikey=
+<region> // 18
+sample= pitch_keycenter= lokey= hikey=
+<region> // 19
+sample= pitch_keycenter= lokey= hikey=
+<region> // 20
+sample= pitch_keycenter= lokey= hikey=
+
+//=======================================================================
+// If more velocity groups are needed, repeat the group and regions
+// sections as needed adding in the new information for the new velocity
+// group.
+//=======================================================================
